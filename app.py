@@ -1,7 +1,7 @@
 import random
 from country_list import get_countries
 from ascii import HANGMANPICS
-kepek = HANGMANPICS()
+kepek = HANGMANPICS
 kerdes = input('Mehet a játék?')
 while kerdes.lower() != 'nem':
     countries = get_countries()
@@ -37,7 +37,7 @@ while kerdes.lower() != 'nem':
             elif eletek == 6:
                 print(kepek[1])
             elif eletek == 5:
-                print(kepekS[2])
+                print(kepek[2])
             elif eletek == 4:
                 print(kepek[3])
             elif eletek == 3:

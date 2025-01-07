@@ -1,6 +1,7 @@
 import random
 from country_list import get_countries
-k+
+kerdes = input('Mehet a játék?')
+while kerdes.lower() != 'nem':
     countries = get_countries()
     szo_raw = random.choice(countries)
     szo = szo_raw.lower()
@@ -33,7 +34,6 @@ k+
         print(blanks)
         print(f"Életek: {eletek}")
 
-        #minden betut kitalaltak
         if "_" not in blanks:
             print("Gratulálok, kitaláltad a szót!")
             break

@@ -1,8 +1,8 @@
 import random
 from lists.contry_and_capital_list import countries_and_capitals
 from lists.ascii import HANGMANPICS
-from app import gamemode1
-from app_hard import gamemode2
+from apps.app import gamemode1
+from apps.app_hard import gamemode2
 kepek = HANGMANPICS
 print('Üdvözöllek a "Hangman country edition" játékban!🙋‍♂️🙋‍♂️')
 start = input('Mehet a játék?\n')

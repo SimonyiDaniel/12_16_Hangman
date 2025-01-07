@@ -1,19 +1,19 @@
 import random
-from country_list import get_countries
-from ascii import HANGMANPICS
+from lists.country_list import get_countries
+from lists.ascii import HANGMANPICS
 kepek = HANGMANPICS
 kerdes = input('Mehet a játék?')
-while kerdes.lower() != 'nem':
+while kerdes.lower() != 'nem' or 'no':
     countries = get_countries()
     szo_raw = random.choice(countries)
     szo = szo_raw.lower()
     eletek = 7
-    blanks = ""
+    blanks = ''
     for i in szo:
-        if i != " ":
-            blanks += "_ "
+        if i != ' ':
+            blanks += '_ '
         else:
-            blanks += "  "
+            blanks += '  '
 
     print(blanks)
 
@@ -32,27 +32,27 @@ while kerdes.lower() != 'nem':
         else:
             print('Nincs benne!')
             eletek -= 1
-            if eletek == 7:
+            if eletek == 6:
                 print(kepek[0])
-            elif eletek == 6:
-                print(kepek[1])
             elif eletek == 5:
-                print(kepek[2])
+                print(kepek[1])
             elif eletek == 4:
-                print(kepek[3])
+                print(kepek[2])
             elif eletek == 3:
-                print(kepek[4])
+                print(kepek[3])
             elif eletek == 2:
-                print(kepek[5])
+                print(kepek[4])
             elif eletek == 1:
+                print(kepek[5])
+            elif eletek == 0:
                 print(kepek[6])
         print(blanks)
-        print(f"Életek: {eletek}")
+        print(f'Életek: {eletek},')
 
         if "_" not in blanks:
-            print("Gratulálok, kitaláltad a szót!")
+            print('Gratulálok, kitaláltad a szót!')
             break
 
     if eletek == 0:
-        print("Játék vége, elfogytak az életeid.")
+        print(f'ék vége, elfogytak az életeid a helyes valasz {szo} volt')
     kerdes = input('Mehet a még egy játék?')

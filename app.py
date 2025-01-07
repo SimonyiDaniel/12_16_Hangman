@@ -1,32 +1,43 @@
-from country_list import get_countries
 import random
+from country_list import get_countries
+k+
+    countries = get_countries()
+    szo_raw = random.choice(countries)
+    szo = szo_raw.lower()
+    eletek = 7
+    blanks = ""
+    for i in szo:
+        if i != " ":
+            blanks += "_ "
+        else:
+            blanks += "  "
 
-countries = get_countries()
-country = random.choice(countries)
-print(country)
-letters = list(country)
+    print(blanks)
 
-lives = 7
+    while eletek > 0:
+        talalat = input('Találj egy betűt: ').lower()
 
-print("Welcome to the Hangman game!")
-print('You have 7 lives, try to guess the country without losing them')
-print(f"The word is {len(country)} long.")
-print(guesses)
+        if talalat in szo:
+            print('Benne van!')
+            new_blanks = ""
+            for i in range(len(szo)):
+                if szo[i] == talalat:
+                    new_blanks += talalat + " "
+                else:
+                    new_blanks += blanks[i*2] + " "
+            blanks = new_blanks
+        else:
+            print('Nincs benne!')
+            eletek -= 1
 
+        print(blanks)
+        print(f"Életek: {eletek}")
 
-for i in range(len(letters)):
-    print("_ " * len(letters))
-    hits = []
-    letter_input = str(input("Guess a letter!: "))
-    if letter_input in letters and letter_input not in hits:
-        hits.append(letter_input)
-    elif: letter
-        
-        
-    
-    
-# for char in letters:
-    
+        #minden betut kitalaltak
+        if "_" not in blanks:
+            print("Gratulálok, kitaláltad a szót!")
+            break
 
-
-
+    if eletek == 0:
+        print("Játék vége, elfogytak az életeid.")
+    kerdes = input('Mehet a még egy játék?')

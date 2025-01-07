@@ -3,8 +3,9 @@ from lists.country_list import get_countries
 from lists.ascii import HANGMANPICS
 kepek = HANGMANPICS
 def gamemode1():
+    print('Ebben a játékmód kikell találnod milyen országra gondoltam!')
     kerdes = input('Készen állsz?')
-    while kerdes.lower() != 'nem' or 'no':
+    while kerdes.lower() not in ['nem', 'no', '❌']:
         countries = get_countries()
         szo_raw = random.choice(countries)
         szo = szo_raw.lower()
@@ -56,4 +57,4 @@ def gamemode1():
 
         if eletek == 0:
             print(f'ék vége, elfogytak az életeid a helyes valasz {szo} volt')
-        kerdes = input('Mehet a még egy játék?')
+        kerdes = input('Mehet még egy játék ezen a nehézségen?')

@@ -3,9 +3,9 @@ from lists.contry_and_capital_list import countries_and_capitals
 from lists.ascii import HANGMANPICS
 kepek = HANGMANPICS
 def gamemode2():
+    print('Ebben a játékmódban nem csak az országot kell kitalálni, hanem a fővárost is! ( a főváros a "|" jel után lesz)') 
     kerdes = input('Készen állsz?')
-    print('Ebben a játékmódban nem csak az országot kell kitalálni, hanem a fővárost is. ( a főváros a "|" jel után lesz)')
-    while kerdes.lower() not in ['nem', 'no']:
+    while kerdes.lower() not in ['nem', 'no', '❌']:
         countries = countries_and_capitals()
         szo_raw = random.choice(countries)
         szo = szo_raw.lower()
@@ -53,4 +53,4 @@ def gamemode2():
         if eletek == 0:
             print(f'Játék vége, elfogytak az életeid. A helyes válasz {szo} volt.')
         
-        kerdes = input('Mehet még egy játék?')
+        kerdes = input('Mehet még egy játék ezen a nehézségen?')

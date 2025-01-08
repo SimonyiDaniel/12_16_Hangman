@@ -21,7 +21,6 @@ def gamemode1():
 
         while eletek > 0:
             talalat = input('Találj egy betűt: ').lower()
-
             if talalat in szo:
                 print('Benne van!')
                 new_blanks = ""

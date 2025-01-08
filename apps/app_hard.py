@@ -41,7 +41,20 @@ def gamemode2():
             else:
                 print('Nincs benne!')
                 eletek -= 1
-                print(kepek[7 - eletek])
+                if eletek == 6:
+                    print(kepek[0])
+                elif eletek == 5:
+                    print(kepek[1])
+                elif eletek == 4:
+                    print(kepek[2])
+                elif eletek == 3:
+                    print(kepek[3])
+                elif eletek == 2:
+                    print(kepek[4])
+                elif eletek == 1:
+                    print(kepek[5])
+                elif eletek == 0:
+                    print(kepek[6])
 
             print(blanks)
             print(f'Életek: {eletek},')

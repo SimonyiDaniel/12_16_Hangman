@@ -55,5 +55,5 @@ def gamemode1():
                 break
 
         if eletek == 0:
-            print(f'ék vége, elfogytak az életeid a helyes valasz {szo} volt')
+            print(f'Játék vége, elfogytak az életeid a helyes valasz {szo} volt')
         kerdes = input('Mehet még egy játék ezen a nehézségen?')
